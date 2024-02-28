@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('GIt Checkout') {       # this stapes for copy hit-hub file or folder we used this option.
+            steps {
+                script {
+                    // Clone the private GitHub repository
+                    git branch: 'main', credentialsId: 'toto', url: 'https://github.com/sahare-rahul/practice.git'      #for syntax genrator of git checkout used option "git: GIT" for both pub and private  
+                    sh 'ls'                                                                                              repogotory cloninng. and for pvt used git-hub token. 
+                }
+            }
+        }
+    }
+}        
